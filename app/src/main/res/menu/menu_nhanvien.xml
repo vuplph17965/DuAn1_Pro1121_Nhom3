@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Quan Ly Khách Hàng" android:id="@+id/mnu_Khach"/>
+    <item android:title="Quan Ly Điện Thoại" android:id="@+id/mnu_DienThoai"/>
+    <item android:title="Hãng Điện Thoại" android:id="@+id/mnu_hangdt"/>
+    <item android:title="Quan Ly Hoá Đơn" android:id="@+id/mnu_HoaDon"/>
+    <item android:title="Thoat" android:id="@+id/mnu_exit"/>
+</menu>

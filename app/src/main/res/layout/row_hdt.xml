@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:id="@+id/linear_SanPham"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/trắng"
+        >
+        <TextView
+            android:id="@+id/txtRowTenHDT"
+            android:text="Hãng điện thoại"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_margin="10dp"
+                android:id="@+id/img_deleteHDT"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/ic_baseline_delete_24"/>
+            <ImageView
+                android:layout_margin="10dp"
+                android:id="@+id/img_edit"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/ic_baseline_edit_24"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
