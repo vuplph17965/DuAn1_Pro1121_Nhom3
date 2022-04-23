@@ -3,10 +3,12 @@ package com.example.duan1_pro1121_nhom3.Login;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +24,7 @@ import java.util.ArrayList;
 public class Activity_DangNhap extends AppCompatActivity {
     Button btnDangNhap;
     EditText edTaiKhoan,edMatKhau;
+    CheckBox chkRememberPass;
     TextView tvDangKi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,13 @@ public class Activity_DangNhap extends AppCompatActivity {
         tvDangKi = findViewById(R.id.tvDangKi);
         edTaiKhoan = findViewById(R.id.edUserLogin);
         edMatKhau = findViewById(R.id.edPassWord);
+        chkRememberPass = findViewById(R.id.chkRememberPass);
+
+        // doc user, pass trong SharedPreferences
+        SharedPreferences pref = getSharedPreferences("USER_FILE", MODE_PRIVATE);
+        edTaiKhoan.setText(pref.getString("USERNAME",""));
+        edMatKhau.setText(pref.getString("PASSWORD",""));
+        chkRememberPass.setChecked(pref.getBoolean("REMEMBER",false));
 
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +60,7 @@ public class Activity_DangNhap extends AppCompatActivity {
                     {
                         if (MatKhau.toString().equals(MatKhau2.toString())==true)
                         {
+                            rememberUser(TaiKhoan,MatKhau,chkRememberPass.isChecked());
                             String VAITRO = nhanViens.get(i).getVaiTro();
                             NhanVien nhanVienput = nhanViens.get(i);
                             Intent intent = new Intent(Activity_DangNhap.this, MainActivity.class);
@@ -85,5 +96,20 @@ public class Activity_DangNhap extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public void rememberUser(String u, String p, boolean status) {
+        SharedPreferences pref = getSharedPreferences("USER_FILE", MODE_PRIVATE);
+        SharedPreferences.Editor edit = pref.edit();
+        if (!status){
+            //xoa tinh trang luu tru truoc do
+            edit.clear();
+        } else {
+            //luu du lieu
+            edit.putString("USERNAME",u);
+            edit.putString("PASSWORD",p);
+            edit.putBoolean("REMEMBER",status);
+        }
+        //luu lai toan bo
+        edit.commit();
     }
 }
