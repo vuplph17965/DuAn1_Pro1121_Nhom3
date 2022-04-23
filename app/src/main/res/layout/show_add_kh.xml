@@ -60,12 +60,8 @@
                         android:layout_margin="5dp"
                         android:drawablePadding="12dp"
                         android:textSize="20dp"
-                        android:hint="Họ và tên:"
-                        android:padding="10dp" />
+                        android:hint="Họ và tên:" />
                 </com.google.android.material.textfield.TextInputLayout>
-
-
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -115,8 +111,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:drawablePadding="12dp"
-                        android:hint="Số ĐT: "
-                        android:padding="10dp" />
+                        android:hint="Số ĐT: " />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -129,8 +124,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:drawablePadding="12dp"
-                        android:hint="Địa chỉ: "
-                        android:padding="10dp" />
+                        android:hint="Địa chỉ: "/>
                 </com.google.android.material.textfield.TextInputLayout>
 
 
