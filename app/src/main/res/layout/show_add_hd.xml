@@ -1,30 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp"
+    android:padding="10dp"
     android:orientation="vertical"
-    android:id="@+id/linear_SanPham"
-    >
-    <EditText
-        android:id="@+id/edTenHDT_ADD"
-        android:hint="Ten Hang"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
+    android:background="@color/EAEAEA">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawablePadding="12dp"
-        />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnADDHDT_"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:backgroundTint="#4CAF50"
-        android:text="Save"
-        app:iconTint="#FFFEFD" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="20dp"
+            android:text="Khách hàng: " />
+        <Spinner
+            android:layout_margin="10dp"
+            android:id="@+id/spinnerKH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="20dp"
+            android:text="Sản phẩm: " />
+        <Spinner
+            android:layout_margin="10dp"
+            android:id="@+id/spinnerSP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="20dp"
+            android:text="Ngày mua: " />
+
+        <TextView
+            android:id="@+id/tvNgayNhap_Add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="18dp"
+            android:text="Nhập ngày"
+            android:textStyle="bold|italic"
+            />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <EditText
+            android:id="@+id/ed_SLN_Add"
+            android:hint="Số lượng"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_margin="5dp"
+            android:drawablePadding="12dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnSaveHD"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#03A9F4"
+            android:text="Save"
+            app:iconTint="#FFFEFD"/>
+
+    </LinearLayout>
 
 </LinearLayout>
