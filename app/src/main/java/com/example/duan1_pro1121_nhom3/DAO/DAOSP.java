@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class DAOSP extends SQLiteOpenHelper {
     Context contextx;
     public DAOSP(@Nullable Context context) {
-        super(context, "dtbs.txt", null, 1);
+        super(context, "DUAN1.txt", null, 1);
         contextx = context;
     }
 
