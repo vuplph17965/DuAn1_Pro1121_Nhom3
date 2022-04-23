@@ -20,6 +20,7 @@ import com.example.duan1_pro1121_nhom3.DAO.DAOSP;
 import com.example.duan1_pro1121_nhom3.Fragment.Fragment_DienThoai;
 import com.example.duan1_pro1121_nhom3.Fragment.Fragment_GioiThieu;
 import com.example.duan1_pro1121_nhom3.Fragment.Fragment_HangDT;
+import com.example.duan1_pro1121_nhom3.Fragment.Fragment_HoaDon;
 import com.example.duan1_pro1121_nhom3.Fragment.Fragment_KhachHang;
 import com.example.duan1_pro1121_nhom3.Fragment.Fragment_NhanVien;
 import com.example.duan1_pro1121_nhom3.Login.Activity_DangNhap;
@@ -113,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                         getSupportActionBar().setTitle("Khách Hàng");
                         break;
                     case R.id.mnu_HoaDon:
-                        fragmentManager.beginTransaction().replace(R.id.fragment_main,new Fragment_DienThoai()).commit();
+                        fragmentManager.beginTransaction().replace(R.id.fragment_main,new Fragment_HoaDon()).commit();
                         getSupportActionBar().setTitle("Hoá Đơn");
                         break;
                     case R.id.mnu_GioiThieu:
