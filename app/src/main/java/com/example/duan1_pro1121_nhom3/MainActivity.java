@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
     {
         intent = new Intent(MainActivity.this, Activity_DangNhap.class);
         startActivity(intent);
+        Toast.makeText(MainActivity.this, "Đã đăng xuất!", Toast.LENGTH_SHORT).show();
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

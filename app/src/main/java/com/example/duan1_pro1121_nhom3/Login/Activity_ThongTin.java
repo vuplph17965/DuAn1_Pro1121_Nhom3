@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.duan1_pro1121_nhom3.DAO.DAOSP;
+import com.example.duan1_pro1121_nhom3.MainActivity;
 import com.example.duan1_pro1121_nhom3.Product.NhanVien;
 import com.example.duan1_pro1121_nhom3.R;
 
@@ -23,7 +24,7 @@ import java.util.Calendar;
 public class Activity_ThongTin extends AppCompatActivity {
     EditText edHoTen,edSDT,edDiaChi;
     TextView txtNgaySinh;
-    Button btnDangKi;
+    Button btnDangKi, btnHuy;
     RadioButton rdNam,rdNu;
     Intent intent;
 
@@ -37,6 +38,7 @@ public class Activity_ThongTin extends AppCompatActivity {
         edDiaChi = findViewById(R.id.edDC_NV_Add);
         edSDT = findViewById(R.id.edSDT_NV_Add);
         btnDangKi = findViewById(R.id.btnDangKiAdd);
+        btnHuy = findViewById(R.id.btnHuy_DK);
         rdNam = findViewById(R.id.rdGT_NV_Nam_Add);
         rdNu = findViewById(R.id.rdGT_NV_Nu_Add);
         txtNgaySinh = findViewById(R.id.tvNS_NV_Add);
@@ -125,6 +127,14 @@ public class Activity_ThongTin extends AppCompatActivity {
                     Toast.makeText(Activity_ThongTin.this, "Số Điện Thoại Phải Là Số và Không Được Để Trống", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+        btnHuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(Activity_ThongTin.this, Activity_DangNhap.class);
+                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Hủy đăng kí", Toast.LENGTH_SHORT).show();
             }
         });
     }

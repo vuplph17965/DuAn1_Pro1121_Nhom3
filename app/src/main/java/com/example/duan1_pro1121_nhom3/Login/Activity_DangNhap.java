@@ -70,6 +70,7 @@ public class Activity_DangNhap extends AppCompatActivity {
                             ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
 
                             startActivity(intent);
+                            Toast.makeText(Activity_DangNhap.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                             return;
                         }
                         if (MatKhau.toString().equals(MatKhau2.toString())==false)

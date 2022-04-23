@@ -44,7 +44,7 @@ public class Activity_DangKi extends AppCompatActivity {
                         return;
                     }
                 }
-                if(TaiKhoan.toString().length()==0&&MatKhau.toString().length()==0&&MatKhau2.toString().length()==0)
+                if(TaiKhoan.toString().length()==0 && MatKhau.toString().length()==0 && MatKhau2.toString().length()==0)
                 {
                     Toast.makeText(Activity_DangKi.this, "Không Được Để Trống", Toast.LENGTH_SHORT).show();
                     return;
